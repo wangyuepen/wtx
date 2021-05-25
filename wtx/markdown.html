@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://unpkg.com/vue/dist/vue.js"></script>
+    <title>Markdown notebook</title>
+    <style>
+        .notebook,.input,.markDown{
+            border: 1px solid red;
+            height: 1000px;
+        }
+
+        .notebook{
+            width: 20%;
+            position: absolute;
+            left: 0;
+            top: 0;
+            background-color: snow;
+        }
+
+        .input{
+            width: 40%;
+            position: absolute;
+            left: 20%;
+            top: 0;
+            background-color: chartreuse;
+        }
+
+        .markDown{
+            width: 40%;
+            position: absolute;
+            left: 60%;
+            top: 0;
+            background-color: gold;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="app">
+        <div class="notebook">notebook</div>
+        <div class="input">input</div>
+        <div class="markDown">markDown</div>
+    </div>
+
+    <script>
+        var vm = new Vue({
+            el:"#app",
+        })
+
+    </script>
+</body>
+
+</html>

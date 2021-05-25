@@ -1,0 +1,26 @@
+        body{
+            margin: 0;
+        }
+
+        .notebook,.input,.markDown{
+            height: 1000px;
+        }
+
+        #notebook{
+            display: flex;
+        }
+
+        .notebook{
+            width: 20%;
+            background-color: snow;
+        }
+
+        .input{
+            width: 40%;
+            background-color: aqua;
+        }
+
+        .markDown{
+            width: 40%;
+            background-color: deepskyblue;
+        }
