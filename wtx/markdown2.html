@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://unpkg.com/vue/dist/vue.js"></script>
+    <script src="https://unpkg.com/marked"></script>
+    <link rel="stylesheet" href="style.css">
+    <title>Markdown notebook</title>
+
+</head>
+
+<body>
+    <div id="notebook">
+        <div class="notebook">notebook</div>
+        <div class="input">
+            <textarea class="inputText" v-model="content">
+            </textarea>
+        </div>
+        <div class="markDown" v-html="previewMarked"></div>
+    </div>
+
+    <script>
+
+        const html = marked('**hello**')
+        console.log(html)
+
+        var vm = new Vue({
+            el: "#notebook",
+            data: {
+                content: "hello world"
+            },
+            computed: {
+                previewMarked() {
+                    return marked(this.content)
+                }
+            }
+        })
+
+    </script>
+</body>
+
+</html>

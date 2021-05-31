@@ -6,6 +6,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://unpkg.com/vue/dist/vue.js"></script>
+    <script src="https://unpkg.com/marked"></script>
+    <link rel="stylesheet" href="style.css">
     <title>Markdown notebook</title>
     <style>
         .notebook,.input,.markDown{
@@ -47,6 +49,10 @@
     </div>
 
     <script>
+
+        const html=marked('**hello**')
+        console.log(html)
+        
         var vm = new Vue({
             el:"#app",
         })
